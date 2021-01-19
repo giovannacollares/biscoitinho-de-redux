@@ -4,8 +4,6 @@ import store from './store'
 
 import Sidebar from './components/Sidebar'
 import Video from './components/Video'
-import course from './store/reducers/course';
-
 
 const App = () => {
   return (
