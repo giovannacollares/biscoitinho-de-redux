@@ -5,6 +5,7 @@ import store from './store'
 import Sidebar from './components/Sidebar'
 import Video from './components/Video'
 import Feed from './components/Feed'
+import CarShop from './components/CarShop'
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
             <Video />
            <Sidebar />
            <Feed />
+           <CarShop />
       </Provider>
     </div>
   )

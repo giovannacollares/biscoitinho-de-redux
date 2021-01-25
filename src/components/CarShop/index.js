@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import { connect } from "react-redux";
 
-const CarShop = () => {
+const CarShop = ({roupa}) => {
   return (
     <div>
-      
+      <h1>Carrinho de Compras</h1>
+      <strong>{roupa.cor} | {roupa.tamanho} | {roupa.preco}</strong>
     </div>
   );
-}; 
+};
 
-export default CarShop
+export default connect((state) => ({
+    roupa: state.roupas.roupa
+}))(CarShop);
