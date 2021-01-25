@@ -2,7 +2,8 @@ import React from "react";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as CourseActions from "../../store/actions/course";
+//  colocando nossas Actions dentro de um Objeto
+import * as CourseActions from "../../store/actions/actions";
 
 const Sidebar = ({ modules, toggleLesson }) => {
   return (
@@ -14,6 +15,7 @@ const Sidebar = ({ modules, toggleLesson }) => {
             {module.lessons.map((lesson) => (
               <li key={lesson.id}>
                 {lesson.title}
+                {/* define uma licao e modulo como ativa.  */}
                 <button onClick={() => toggleLesson(module, lesson)}>
                   Selecionar
                 </button>
@@ -26,11 +28,14 @@ const Sidebar = ({ modules, toggleLesson }) => {
   );
 };
 
+// funcao que retorna o nosso estado
 const mapStateToProps = (state) => ({
   modules: state.course.modules,
 });
 
-const mapDispatchToProps = (dispatch) => 
+//  funcao que retorna um dispatch para disparar uma action
+const mapDispatchToProps = (dispatch) =>
+  // mapeando nosso Objeto em forma de propriedade
   bindActionCreators(CourseActions, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

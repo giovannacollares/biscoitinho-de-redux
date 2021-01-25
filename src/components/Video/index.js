@@ -9,11 +9,11 @@ const Video = ({ activeLesson, activeModule }) => {
       <br />
       <span>Aula: {activeLesson.title}</span>
     </div>
-  
   );
 };
 
-export default connect(state => ({
+export default connect((state) => ({
+  // recebemos a licao e modulo ativo com a disparada da action
   activeLesson: state.course.activeLesson,
   activeModule: state.course.activeModule,
 }))(Video);

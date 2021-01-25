@@ -24,6 +24,7 @@ const INITIAL_STATE = {
 export default function course(state = INITIAL_STATE, action) {
   if (action.type === "TOGGLE_LESSON") {
     return {
+      // um novo state é criado e retornado
       ...state,
       activeLesson: action.lesson,
       activeModule: action.module,
