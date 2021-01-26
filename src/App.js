@@ -1,22 +1,19 @@
-import React from 'react'
+import React from 'react';
 import { Provider } from "react-redux";
-import store from './store'
+import store from './store';
 
-import Sidebar from './components/Sidebar'
-import Video from './components/Video'
-import Feed from './components/Feed'
-import CarShop from './components/CarShop'
-
+import Feed from './components/Feed';
+import FortuneCookie from './components/FortuneCookie';
 
 const App = () => {
   return (
     <div>
+    <main>
       <Provider store={ store }>
-            <Video />
-           <Sidebar />
            <Feed />
-           <CarShop />
+           <FortuneCookie />
       </Provider>
+    </main>
     </div>
   )
 }

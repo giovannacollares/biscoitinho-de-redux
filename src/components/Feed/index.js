@@ -1,30 +1,33 @@
 import React from "react";
 import { connect } from "react-redux";
+import Logo from '../FortuneCookie/imagem/biscoitodasorte.png';
+import './css/index.css';
 
 import { bindActionCreators } from "redux";
 // nossas actions
-import * as CarrinhoAction from "../../store/actions/actions";
+import * as CookieAction from "../../store/actions/actions";
 
-const Feed = ({ roupas, adicionarCarrinho }) => {
+const Feed = ({ fortuneCookie, addFortuneCookie }) => {
   return (
     <section>
-      <h3>Feed de Roupas</h3>
-      <ul>
-        {roupas.map((item) => (
-          <li key={item.id}>
-            {item.cor} | {item.tamanho} | {item.preco}
-            <button onClick={() => adicionarCarrinho(item)}>Comprar</button>
-          </li>
+        <h1>Escolha sua sorte:</h1>
+        <div className="biscoitinho">
+        {fortuneCookie.map((item) => (
+          <img src={Logo} alt="Biscoito da Sorte" onClick={() => addFortuneCookie(item)} />
         ))}
-      </ul>
+        </div>
+        
     </section>
   );
 };
 
 const mapStateToProps = (state) => ({
-  roupas: state.roupas.feed,
+  fortuneCookie: state.fortuneCookie.feed,
 });
 
-const mapDispatchToProps = (dispatch) => bindActionCreators(CarrinhoAction, dispatch)
+const mapDispatchToProps = (dispatch) => bindActionCreators(CookieAction, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Feed);
+
+
+// <p key={item.id}> {item.cor} | {item.tamanho} | {item.preco} </p>

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+h1 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 48px;
+}
+
+img {
+    width: 150px;
+    padding: 100px;
+}
+img:hover {
+    width: 200px;
+    padding: 50px;
+  }
+
+.biscoitinho {
+    text-align: center;
+}
+
+body {
+    background-color:burlywood;
+}
