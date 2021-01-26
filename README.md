@@ -25,4 +25,4 @@ Atualmente rodando com:
 - [x] Redux
 
 ## Screenshots
-<img width="45%" src="/Screenshots/screenshoti.png">
+<img width="90%" src="/Screenshots/screenshot1.png">
