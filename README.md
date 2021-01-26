@@ -6,7 +6,7 @@
 
 
 
-<div align="center"> <img width="300px" src="/public/favicon.ico"> <br>
+<div align="center"> <img width="300px" src="/public/favicon.ico"> </div> <br>
 
 ## Índice
 * [Sobre o projeto](#sobre-o-projeto)
