@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+.curiosidades  {
+    font-family: 'Amatic SC', cursive;
+    font-size: large;
+
+    height: 10vh;
+    width: 15vh;
+    background-color: rgb(255, 85, 85);
+
+    border: 1px black;
+    border-radius: 60%;
+}
+
+.curiosidades:hover {
+        
+    background-color: rgb(243, 243, 243);
+
+}
+
+
+
+
